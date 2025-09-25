@@ -214,6 +214,10 @@ position = Vector2(2123, 717)
 [node name="Coin6" parent="." instance=ExtResource("8_p2sx0")]
 position = Vector2(2411, 636)
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="CoinUI" parent="CanvasLayer" instance=ExtResource("12_d08tm")]
+
 [node name="Player" type="CharacterBody2D" parent="."]
 position = Vector2(459, 612)
 scale = Vector2(0.5, 0.5)
@@ -232,5 +236,3 @@ position = Vector2(4.00001, 7.99997)
 scale = Vector2(3.45, 3.2085)
 sprite_frames = SubResource("SpriteFrames_siwpi")
 animation = &"run"
-
-[node name="CoinUI" parent="." instance=ExtResource("12_d08tm")]

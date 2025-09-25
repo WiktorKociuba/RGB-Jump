@@ -206,7 +206,9 @@ position = Vector2(3262, 846)
 [node name="Coin6" parent="." instance=ExtResource("8_051s1")]
 position = Vector2(3871, 596)
 
-[node name="CoinUI" parent="." instance=ExtResource("9_in4v8")]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="CoinUI" parent="CanvasLayer" instance=ExtResource("9_in4v8")]
 
 [node name="Player" type="CharacterBody2D" parent="."]
 position = Vector2(459, 612)
