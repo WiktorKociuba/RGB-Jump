@@ -1,0 +1,117 @@
+[gd_scene load_steps=20 format=3 uid="uid://cmpv2ue0voysi"]
+
+[ext_resource type="Texture2D" uid="uid://52y1fcs02ydc" path="res://images/banner.png" id="1_83s16"]
+[ext_resource type="Script" uid="uid://ck22hb20mrvr8" path="res://scripts/main_menu.gd" id="1_w7d22"]
+[ext_resource type="Texture2D" uid="uid://vfyspnon7mrg" path="res://images/play.png" id="2_w7d22"]
+[ext_resource type="Script" uid="uid://jx03qpwp32ra" path="res://scripts/parallax_background.gd" id="4_0ei6b"]
+[ext_resource type="Texture2D" uid="uid://j04nfeoaubjk" path="res://images/2.png" id="4_hvu0j"]
+[ext_resource type="Texture2D" uid="uid://cr54gw2ugbahb" path="res://images/1.png" id="5_0ei6b"]
+[ext_resource type="Texture2D" uid="uid://k2qme6ygielo" path="res://images/3.png" id="6_rdsan"]
+[ext_resource type="Texture2D" uid="uid://cmtldp6i1o4dj" path="res://images/4.png" id="7_fy5us"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_83s16"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w7d22"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wc2lj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wked4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c3jr6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hvu0j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0ei6b"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rdsan"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fy5us"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o0ref"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qyr6b"]
+
+[node name="MarginContainer" type="MarginContainer"]
+offset_left = -44.0
+offset_top = 20.0
+offset_right = 1220.0
+offset_bottom = 436.0
+theme_override_constants/margin_left = 120
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_right = 120
+theme_override_constants/margin_bottom = 80
+script = ExtResource("1_w7d22")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Logo" type="TextureRect" parent="VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_83s16")
+
+[node name="Play" type="TextureRect" parent="VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_w7d22")
+
+[node name="Button" type="Button" parent="VBoxContainer/Play"]
+layout_mode = 0
+offset_left = 299.0
+offset_top = 37.0
+offset_right = 307.0
+offset_bottom = 45.0
+scale = Vector2(51.6641, 26.6348)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_83s16")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_w7d22")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_wc2lj")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_wked4")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_c3jr6")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_hvu0j")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_0ei6b")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_rdsan")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_fy5us")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_o0ref")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_qyr6b")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scroll_offset = Vector2(500, 0)
+scroll_base_offset = Vector2(-100, 0)
+script = ExtResource("4_0ei6b")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.16, 1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+z_index = 1
+scale = Vector2(2, 2.273)
+texture = ExtResource("4_hvu0j")
+centered = false
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.1, 1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="1" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+scale = Vector2(2, 2.273)
+texture = ExtResource("5_0ei6b")
+centered = false
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.14, 1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+z_index = 2
+scale = Vector2(2, 2.273)
+texture = ExtResource("6_rdsan")
+centered = false
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.2, 1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="4" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+z_index = 3
+scale = Vector2(2, 2.273)
+texture = ExtResource("7_fy5us")
+centered = false
