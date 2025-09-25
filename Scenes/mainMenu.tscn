@@ -54,6 +54,7 @@ layout_mode = 2
 texture = ExtResource("2_w7d22")
 
 [node name="Button" type="Button" parent="VBoxContainer/Play"]
+z_index = 13
 layout_mode = 0
 offset_left = 299.0
 offset_top = 37.0

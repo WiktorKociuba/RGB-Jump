@@ -9,4 +9,4 @@ func _ready() -> void:
 func on_coin_collected(value: int) -> void:
 	if value >= 6:
 		GameController.total_coins = 0
-		get_tree().change_scene_to_file("res://mainMenu.tscn")
+		get_tree().change_scene_to_file("res://Scenes/mainMenu.tscn")
