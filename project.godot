@@ -12,7 +12,7 @@ config_version=5
 
 config/name="RGB Jump"
 run/main_scene="uid://cmpv2ue0voysi"
-config/features=PackedStringArray("4.4", "Forward Plus")
+config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="uid://bi0kdo1agrhbe"
 
 [autoload]
